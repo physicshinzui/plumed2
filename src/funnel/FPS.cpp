@@ -251,7 +251,7 @@ void FUNNEL_PS::calculate() {
   */
 
   // the position is   Rot(ligand-com_prot_md)+ com_prot_ref
-  Vector ligand_centered =getPositions().back()-centerpositions;
+  Vector ligand_centered =getPositions().back()-centerreference;
   Vector ligand_aligned =matmul(Rotation,ligand_centered);
   Vector v = ligand_aligned +centerreference -p1;
 
